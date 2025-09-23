@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cardápio | Gelato di Casa | Sorvetes e Delícias</title>
+    <link rel="icon" type="image/png" href="favicon.png" title="Gelato di Casa">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="menu-cardapio">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#sorvetes">Sorvetes</a></li>
+                <li><a href="#sobremesas">Sobremesas</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><button id="btn-ver-carrinho">Ver Carrinho (<span id="contador-itens">0</span>)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sorvetes -->
+        <section id="sorvetes">
+            <h2>Nossos Sorvetes</h2>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h3>Casquinha Tradicional</h3>
+                    <p>Casquinha crocante com sorvete de chocolate, baunilha ou morango</p>
+                    <span class="preco">R$ 10,00</span>
+                    <button class="btn-adicionar" data-produto="Casquinha Tradicional" data-preco="10.00">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Copo de Sorvete</h3>
+                    <p>Copo com duas bolas de sorvete de sabores variados</p>
+                    <span class="preco">R$ 12,00</span>
+                    <button class="btn-adicionar" data-produto="Copo de Sorvete" data-preco="12.00">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Taça Gelato</h3>
+                    <p>Taça com três sabores, chantilly e calda de chocolate</p>
+                    <span class="preco">R$ 18,00</span>
+                    <button class="btn-adicionar" data-produto="Taça Gelato" data-preco="18.00">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Milkshake Gelato</h3>
+                    <p>Milkshake cremoso com sorvete e calda de sua preferência</p>
+                    <span class="preco">R$ 15,00</span>
+                    <button class="btn-adicionar" data-produto="Milkshake Gelato" data-preco="15.00">Adicionar</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sobremesas -->
+        <section id="sobremesas">
+            <h2>Sobremesas</h2>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h3>Bolo Gelado</h3>
+                    <p>Bolo com camadas de sorvete e cobertura de chocolate</p>
+                    <span class="preco">R$ 20,00</span>
+                    <button class="btn-adicionar" data-produto="Bolo Gelado" data-preco="20.00">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Pavê de Sorvete</h3>
+                    <p>Pavê cremoso com sorvete, biscoito e calda de chocolate</p>
+                    <span class="preco">R$ 22,00</span>
+                    <button class="btn-adicionar" data-produto="Pavê de Sorvete" data-preco="22.00">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Sundae Gelato</h3>
+                    <p>Taça com sorvete, calda, chantilly e granulado</p>
+                    <span class="preco">R$ 18,00</span>
+                    <button class="btn-adicionar" data-produto="Sundae Gelato" data-preco="18.00">Adicionar</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Bebidas -->
+        <section id="bebidas">
+            <h2>Bebidas</h2>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h3>Refrigerante 350ml</h3>
+                    <p>Cola geladinha ou sabores variados</p>
+                    <span class="preco">R$ 7,00</span>
+                    <button class="btn-adicionar" data-produto="Refrigerante 350ml" data-preco="7.00">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Suco Natural 300ml</h3>
+                    <p>Suco fresquinho, sem conservantes</p>
+                    <span class="preco">R$ 9,00</span>
+                    <button class="btn-adicionar" data-produto="Suco Natural 300ml" data-preco="9.00">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Água Mineral 500ml</h3>
+                    <p>Água fresca, com ou sem gás</p>
+                    <span class="preco">R$ 4,00</span>
+                    <button class="btn-adicionar" data-produto="Água Mineral 500ml" data-preco="4.00">Adicionar</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Promoções -->
+        <section id="promocoes">
+            <h2>Promoções do Dia</h2>
+            <p class="data-promo">
+                Promoções válidas apenas durante nosso horário de funcionamento — <span id="data-atual"></span> — das
+                09:00 às 20:00
+            </p>
+            <p class="info-loja">
+                📍 Rua Exemplo, 123 - Centro, Cidade/UF<br>
+                🕒 Horário de funcionamento: Segunda a sábado, 09:00 às 20:00
+            </p>
+            <ul class="lista-lanches">
+                <li class="lanche-item">
+                    <h3>Taça Gelato com 10% OFF</h3>
+                    <p>Taça Gelato + calda extra de chocolate</p>
+                    <span class="preco">R$ 16,20</span>
+                    <button class="btn-adicionar" data-produto="Taça Gelato com 10% OFF" data-preco="16.20">Adicionar</button>
+                </li>
+                <li class="lanche-item">
+                    <h3>Combo Sundae + Refrigerante</h3>
+                    <p>Sundae Gelato + Refrigerante 350ml</p>
+                    <span class="preco">R$ 23,00</span>
+                    <button class="btn-adicionar" data-produto="Combo Sundae + Refrigerante" data-preco="23.00">Adicionar</button>
+                </li>
+            </ul>
+        </section>
+
+        <script>
+            const dataAtualEl = document.getElementById('data-atual');
+            const hoje = new Date();
+            const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            dataAtualEl.textContent = hoje.toLocaleDateString('pt-BR', opcoes);
+        </script>
+    </main>
+
+    <div id="modal-carrinho" class="modal-carrinho hidden">
+        <div class="modal-content">
+            <h2>Seu Carrinho</h2>
+            <ul id="lista-carrinho"></ul>
+            <p id="total-carrinho">Total: R$ 0,00</p>
+
+            <div class="opcoes-pedido">
+                <label for="tipo-entrega">Tipo de Pedido:</label><br />
+                <select id="tipo-entrega" name="tipo-entrega">
+                    <option value="Entrega">Entrega (+R$ 8,00)</option>
+                    <option value="Retirada">Retirada</option>
+                </select>
+
+                <br /><br />
+
+                <div id="campo-endereco" style="display: none;">
+                    <label for="endereco">Endereço de Entrega:</label><br />
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade" />
+                </div>
+
+                <br />
+
+                <label for="forma-pagamento">Forma de Pagamento:</label><br />
+                <select id="forma-pagamento" name="forma-pagamento">
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    <option value="Cartão de Débito">Cartão de Débito</option>
+                </select>
+
+                <br /><br />
+
+                <label for="troco">Precisa de troco? Se sim, informe o valor:</label><br />
+                <input type="text" id="troco" name="troco" placeholder="Ex: 50,00" />
+            </div>
+
+            <button id="btn-enviar-whatsapp">Enviar Pedido via WhatsApp</button>
+            <button id="btn-limpar-carrinho">Limpar Carrinho</button>
+            <button id="btn-fechar-carrinho">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        &copy; 2025 Gelato di Casa - Sorvetes e Delícias para todos os momentos - Todos os direitos reservados.
+    </footer>
+
+</body>
+
+</html>
